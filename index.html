@@ -13,6 +13,9 @@
 <body>
     <script>
 
+
+//Ciclo de un triángulo
+//Solución 1
 let cont = "";
 for (let i = 0; i < 7; i++) {
     cont += "#";
@@ -20,25 +23,45 @@ for (let i = 0; i < 7; i++) {
 }
 
 
-for (let i = 1; i <= 100; i++){
-    if((i % 3 == 0) && (i % 5 == 0)){
-        console.log("FizzBuzz");
-        }
-    if(i % 3 == 0){
-                console.log("Fizz ");
-                }else if(i % 5 == 0){
-                    console.log("Buzz ");
-                    }
-                    else{
-                    console.log(i);
-                } 
-            }
-    
-            
+//Solución 2 (Optima)
+for (let line = "#"; line.length < 8; line += "#")
+  console.log(line);
 
 
-            
+//FizzBuzz
+for (let n = 1; n <= 100; n++) {
+  let output = "";
+  if (n % 3 == 0) output += "Fizz";
+  if (n % 5 == 0) output += "Buzz";
+  console.log(output || n);
+}
+
+//Tablero de ajedrez
+
+let cont1 = 0;
+let str = "";
+
+ for(let i=1; i<=8; i++){
+    if(i % 2 == 0) str += "#" + "\n";
+    if(i % 2 == 1) str += " " + "\n";
+  
     
+    for(let j=1; j<=8;j++){
+        if(j % 2 == 0) str += "#";
+        if(j % 2 == 1) str += " ";
+    }
+}
+console.log(str);
+/*let tablero = "";8
+    cont1 = cont1 + 1;
+
+    if(cont1 % 2 == 0){
+        tablero += "#"
+    }else{
+        tablero += " ";
+
+    }
+    console.log(tablero);*/
 
 </script>
 </body>
